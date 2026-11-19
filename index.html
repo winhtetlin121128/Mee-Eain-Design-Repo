@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f4efe6">
+  <title>Orbit Coffee — Find your daily ritual</title>
+  <style>
+    :root{--ink:#202b24;--cream:#f4efe6;--orange:#d86b43;--sage:#ccd3bb;--muted:#72796e}
+    *{box-sizing:border-box}body{margin:0;background:var(--cream);color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif}
+    a{color:inherit;text-decoration:none}.nav{height:76px;padding:0 7vw;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #dcd7cc}
+    .brand{font-size:20px;font-weight:850;letter-spacing:-1px}.brand span{color:var(--orange)}.links{display:flex;gap:32px;font-size:13px;font-weight:650}.cart{border:1px solid var(--ink);padding:10px 16px;border-radius:99px;font-size:12px}
+    main{max-width:1240px;margin:auto;padding:0 7vw}.hero{min-height:620px;display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:6vw;padding:58px 0}
+    .eyebrow{text-transform:uppercase;letter-spacing:2px;color:var(--orange);font-size:11px;font-weight:800}.hero h1{font-size:clamp(52px,7vw,94px);line-height:.94;letter-spacing:-.075em;margin:22px 0}.hero p{max-width:420px;color:var(--muted);font-size:16px;line-height:1.7}
+    .actions{display:flex;gap:12px;margin-top:28px}.button{display:inline-block;background:var(--ink);color:white;border-radius:99px;padding:15px 22px;font-weight:700;font-size:13px}.button.alt{background:transparent;color:var(--ink);border:1px solid #b8b9ad}
+    .art{height:450px;position:relative;border-radius:48% 48% 18px 18px;background:var(--sage);overflow:hidden;display:grid;place-items:center}
+    .sun{position:absolute;width:260px;height:260px;right:10%;top:9%;background:#e8ad68;border-radius:50%}
+    .cup{position:relative;z-index:1;width:205px;height:230px;margin-top:90px;background:#f7f2e9;border-radius:18px 18px 58px 58px;box-shadow:18px 24px 35px #28372b30;transform:rotate(-7deg);display:grid;place-items:center}
+    .cup:after{content:"";position:absolute;right:-49px;top:42px;width:67px;height:90px;border:16px solid #f7f2e9;border-left:0;border-radius:0 50% 50% 0}
+    .cup-mark{font-weight:900;font-size:23px;letter-spacing:-2px}.bean{position:absolute;z-index:2;width:33px;height:48px;background:#553b2e;border-radius:55% 45% 55% 45%;transform:rotate(28deg)}.bean:after{content:"";position:absolute;left:16px;top:5px;height:38px;border-left:2px solid #d6aa79;transform:rotate(12deg)}
+    .bean.one{left:17%;bottom:17%}.bean.two{right:19%;bottom:25%;transform:rotate(-35deg) scale(.7)}
+    .note{position:absolute;bottom:22px;left:24px;background:#f4efe6;padding:12px 16px;border-radius:8px;font-size:11px;font-weight:750;letter-spacing:.5px}
+    .strip{display:flex;justify-content:space-between;gap:20px;padding:25px 0;border-top:1px solid #dcd7cc;border-bottom:1px solid #dcd7cc;color:var(--muted);text-transform:uppercase;font-size:10px;letter-spacing:1.5px;font-weight:750}
+    .section{padding:90px 0}.section-head{display:flex;justify-content:space-between;align-items:end;margin-bottom:28px}.section h2{font-size:42px;letter-spacing:-.06em;margin:8px 0}.products{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .product{background:#e9e5da;border-radius:14px;padding:22px;min-height:240px;display:flex;flex-direction:column;justify-content:space-between}.product:nth-child(2){background:#e7d7c5}.product:nth-child(3){background:#d9dfd0}
+    .bag{width:72px;height:100px;background:#b76e45;border-radius:8px 8px 16px 16px;margin:12px auto;position:relative;box-shadow:0 10px 20px #44352720}.bag:before{content:"";position:absolute;top:-7px;left:0;width:72px;height:15px;background:#453629;border-radius:4px}.bag:after{content:"ORBIT";position:absolute;top:42px;left:13px;color:#fff2dc;font-size:10px;font-weight:900;letter-spacing:1px}.product:nth-child(2) .bag{background:#d2a05c}.product:nth-child(3) .bag{background:#6a7657}
+    .product h3{margin:0;font-size:17px}.product small{color:var(--muted)}.price{font-weight:800}.product-line{display:flex;justify-content:space-between;align-items:center}
+    footer{background:var(--ink);color:var(--cream);padding:32px 7vw;display:flex;justify-content:space-between;font-size:12px}
+    @media(max-width:760px){.links{display:none}.hero{grid-template-columns:1fr;padding-top:58px;gap:36px}.art{height:350px}.products{grid-template-columns:1fr}.strip{flex-wrap:wrap}.section{padding:65px 0}.hero h1{font-size:64px}footer{gap:18px;flex-direction:column}}
+  </style>
+</head>
+<body>
+  <header class="nav"><a class="brand" href="#">ORBIT<span>®</span></a><nav class="links"><a href="#coffee">Coffee</a><a href="#story">Our story</a><a href="#journal">Journal</a></nav><a class="cart" href="#coffee">Shop the roast ↗</a></header>
+  <main>
+    <section class="hero" id="story"><div><div class="eyebrow">Small batch · Big mornings</div><h1>Find your<br>daily orbit.</h1><p>Thoughtfully sourced coffee for slow mornings, bright ideas, and the little rituals that make a day yours.</p><div class="actions"><a class="button" href="#coffee">Meet your coffee ↗</a><a class="button alt" href="#story">Our story</a></div></div>
+      <div class="art" aria-label="Illustration of a coffee cup at sunrise"><div class="sun"></div><div class="cup"><div class="cup-mark">ORBIT<br>COFFEE</div></div><div class="bean one"></div><div class="bean two"></div><div class="note">GOOD DAYS START HERE · EST. 2024</div></div>
+    </section>
+    <div class="strip"><span>Ethically sourced</span><span>Roasted weekly</span><span>Free shipping over $40</span><span>Good coffee, no fuss</span></div>
+    <section class="section" id="coffee"><div class="section-head"><div><div class="eyebrow">The lineup</div><h2>Choose your orbit.</h2></div><a class="button alt" href="#coffee">Explore all coffee ↗</a></div><div class="products">
+      <article class="product"><div class="bag"></div><div class="product-line"><div><h3>Daybreak Blend</h3><small>Chocolate · Orange · Honey</small></div><span class="price">$18</span></div></article>
+      <article class="product"><div class="bag"></div><div class="product-line"><div><h3>Golden Hour</h3><small>Peach · Caramel · Cocoa</small></div><span class="price">$21</span></div></article>
+      <article class="product"><div class="bag"></div><div class="product-line"><div><h3>Night Shift</h3><small>Dark chocolate · Fig · Spice</small></div><span class="price">$19</span></div></article>
+    </div></section>
+  </main>
+  <footer id="journal"><span class="brand">ORBIT<span>®</span></span><span>Good coffee for wherever you’re going.</span><span>© 2026 Orbit Coffee</span></footer>
+</body>
+</html>
